@@ -32,8 +32,8 @@ class UserClass: ObservableObject {
 
 // (x) Create user class w info that can be passed throughout all the registration screens
 // (x) Finish saving the user photos
-// () Start with the swipe left, swipe right shit
-// () Create user profile accounts for all the roommate matches
+// (x) Start with the swipe left, swipe right shit
+// () Create user profile page for all the roommate matches
 // () Fix Registration UI
 // () Profile / Settings Page
 

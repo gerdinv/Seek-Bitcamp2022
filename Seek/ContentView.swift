@@ -8,9 +8,36 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var viewModel: AccountViewModel
     var body: some View {
         NavigationView {
-            LoginView()
+            if (!viewModel.isSignedIn) {
+                TabView {
+                    HomePageView().tabItem {
+                        VStack {
+                              Text("Home")
+                              Image(systemName: "house.fill")
+                          }
+                    }
+                    
+                    MatchesView().tabItem {
+                        VStack {
+                              Text("Home")
+                              Image(systemName: "house.fill")
+                          }
+                    }
+                    
+                    ProfileView().tabItem {
+                        VStack {
+                              Text("Settings")
+                              Image(systemName: "person.fill")
+                          }
+                    }
+                }
+                .tabViewStyle(.automatic)
+            } else {
+                LoginView()
+            }
         }
     }
 }
