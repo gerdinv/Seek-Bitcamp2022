@@ -50,13 +50,13 @@ struct LoginView: View {
                     .scaledToFit()
                     .frame(width: 48, height: 48)
                     .cornerRadius(12)
-                
+
                 Image("twitter_logo")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 48, height: 48)
                     .cornerRadius(12)
-                
+
                 Image("google_logo")
                     .resizable()
                     .scaledToFit()
@@ -68,7 +68,7 @@ struct LoginView: View {
                 Text("Don't have an account?")
                     .fontWeight(.medium)
                 NavigationLink {
-                    RegisterView()
+                    RegisterView(bday: Date())
                 } label: {
                     Text("Sign up.")
                         .foregroundColor(.red)

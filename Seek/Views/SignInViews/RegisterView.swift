@@ -12,52 +12,76 @@ struct RegisterView: View {
     @State var email: String = ""
     @State var password: String = ""
     @State var passwordConfirmation: String = ""
-    @State var birthday: String = ""
-    @State private var selectedFlavor: String = ""
+
+    @State var bday: Date
+    @State var gradYear = 0
+    @State var leaseLength =  0
+    
+    var colors : [Color] = [.red, .green, .blue, .purple, .pink, .brown]
     
     var body: some View {
-        VStack(spacing: 10) {
+        VStack(spacing: 20) {
             Text("Create an Account")
                 .font(.title)
                 .fontWeight(.bold)
-            
             Spacer()
-                .frame(width: 0, height: 30)
+                .frame(width: 0, height: 10)
+            VStack {
+                CustomTextField(myText: $username,
+                                isSecure: false,
+                                imageName: "person.fill",
+                                placeholder: Text("Full Name"))
+                
+                CustomTextField(myText: $email,
+                                isSecure: false,
+                                imageName: "envelope.badge",
+                                placeholder: Text("Email"))
+                
+                CustomTextField(myText: $password,
+                                isSecure: true,
+                                imageName: "lock",
+                                placeholder: Text("Password"))
+                
+                CustomTextField(myText: $passwordConfirmation,
+                                isSecure: true,
+                                imageName: "lock",
+                                placeholder: Text("Confirm Password"))
+            }
             
-            CustomTextField(myText: $username,
-                            isSecure: false,
-                            imageName: "person.fill",
-                            placeholder: Text("Full Name"))
             
-            CustomTextField(myText: $email,
-                            isSecure: false,
-                            imageName: "envelope.badge",
-                            placeholder: Text("Email"))
-            
-            CustomTextField(myText: $password,
-                            isSecure: true,
-                            imageName: "lock",
-                            placeholder: Text("Password"))
-            
-            CustomTextField(myText: $passwordConfirmation,
-                            isSecure: true,
-                            imageName: "lock",
-                            placeholder: Text("Confirm Password"))
-            
-            
-            
-            Picker("Gender", selection: $selectedFlavor) {
-                Text("Male").tag("male")
-                Text("Female").tag("female")
-                Text("Other").tag("other")
+            VStack(alignment: .leading) {
+                DatePicker("Birth date:", selection: $bday, in: ...Date(), displayedComponents: .date)
+                    .datePickerStyle(.compact)
+                    .frame(width: 280)
+                    .font(.system(size: 20, weight: .semibold))
+                Text("Graduation Year:")
+                    .fontWeight(.semibold)
+                Picker("What is your graduation year?", selection: $gradYear) {
+                    Text("2022").tag(0)
+                    Text("2023").tag(1)
+                    Text("2024").tag(2)
+                    Text("2025").tag(3)
+                    Text("2026").tag(4)
+                    Text("2027").tag(5)
+                }
+                .pickerStyle(.segmented)
+                Text("Desired Lease Length")
+                    .fontWeight(.semibold)
+                Picker("What is your desired lease length?", selection: $leaseLength) {
+                    Text("6 Months").tag(0)
+                    Text("12 Months").tag(1)
+                }
+                .pickerStyle(.segmented)
             }
             .frame(width: 280)
-            .pickerStyle(SegmentedPickerStyle())
             
-            
-            FilledButton(text: "Continue") {
-                print("HEY")
+            NavigationLink {
+                ExtraSignupInfo()
+            } label: {
+                Text("HEY")
             }
+
+          
             .padding(.top, 25)
             
             Spacer()
@@ -68,6 +92,6 @@ struct RegisterView: View {
 
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterView()
+        RegisterView(bday: Date())
     }
 }
