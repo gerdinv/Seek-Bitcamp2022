@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct SeekApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let viewModel = AccountViewModel()
+            ContentView().environmentObject(viewModel)
         }
     }
 }
