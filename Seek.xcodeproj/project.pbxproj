@@ -16,6 +16,7 @@
 		0B9E7C542801199500DD539E /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9E7C532801199500DD539E /* Secrets.swift */; };
 		0B9E7C5A28011E3800DD539E /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9E7C5928011E3800DD539E /* AccountViewModel.swift */; };
 		880DD22899CACF63C01B6DA3 /* Pods_Seek.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9338A00C44EAA1D170C77DC7 /* Pods_Seek.framework */; };
+		C0866198280136FA006E59AA /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0866197280136FA006E59AA /* GreetingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		0B9E7C5928011E3800DD539E /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		685BF334171F0D776ED2170C /* Pods-Seek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seek.debug.xcconfig"; path = "Target Support Files/Pods-Seek/Pods-Seek.debug.xcconfig"; sourceTree = "<group>"; };
 		9338A00C44EAA1D170C77DC7 /* Pods_Seek.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seek.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0866197280136FA006E59AA /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
 		D1F6BFD6C68362CBC2BD53E3 /* Pods-Seek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seek.release.xcconfig"; path = "Target Support Files/Pods-Seek/Pods-Seek.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 		0B9E7C5828011DEE00DD539E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C0866196280136E6006E59AA /* greetingView */,
 				0B9E7C5928011E3800DD539E /* AccountViewModel.swift */,
 			);
 			path = Views;
@@ -116,6 +119,14 @@
 				9338A00C44EAA1D170C77DC7 /* Pods_Seek.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0866196280136E6006E59AA /* greetingView */ = {
+			isa = PBXGroup;
+			children = (
+				C0866197280136FA006E59AA /* GreetingView.swift */,
+			);
+			path = greetingView;
 			sourceTree = "<group>";
 		};
 		C38410A32973903147FF06A0 /* Pods */ = {
@@ -242,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B9E7C502801192C00DD539E /* AppDelegate.swift in Sources */,
+				C0866198280136FA006E59AA /* GreetingView.swift in Sources */,
 				0B9E7C542801199500DD539E /* Secrets.swift in Sources */,
 				0B9E7C5A28011E3800DD539E /* AccountViewModel.swift in Sources */,
 				0B9E7C432801143C00DD539E /* ContentView.swift in Sources */,
