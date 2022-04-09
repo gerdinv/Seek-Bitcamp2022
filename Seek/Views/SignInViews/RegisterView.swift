@@ -14,7 +14,7 @@ struct RegisterView: View {
     @State var passwordConfirmation: String = ""
     @State var birthday: String = ""
     @State private var selectedFlavor: String = ""
-
+    
     var body: some View {
         VStack(spacing: 10) {
             Text("Create an Account")
@@ -44,7 +44,17 @@ struct RegisterView: View {
                             imageName: "lock",
                             placeholder: Text("Confirm Password"))
             
-     
+            
+            
+            Picker("Gender", selection: $selectedFlavor) {
+                Text("Male").tag("male")
+                Text("Female").tag("female")
+                Text("Other").tag("other")
+            }
+            .frame(width: 280)
+            .pickerStyle(SegmentedPickerStyle())
+            
+            
             FilledButton(text: "Continue") {
                 print("HEY")
             }

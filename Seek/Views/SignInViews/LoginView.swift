@@ -26,15 +26,13 @@ struct LoginView: View {
                             isSecure: true, imageName: "lock",
                             placeholder: Text("Password"))
             
-            Text("Forgot Password")
+            Text("Forgot Password?")
                 .font(.system(size: 12, weight: .semibold))
                 .padding(.leading, 160)
             
             FilledButton(text: "LOGIN") {
                 viewModel.signIn(username: username, password: password)
             }
-            
-            
             
             HStack {
                 Rectangle()
@@ -70,7 +68,7 @@ struct LoginView: View {
                 Text("Don't have an account?")
                     .fontWeight(.medium)
                 NavigationLink {
-//                    RegistrationView()
+                    RegisterView()
                 } label: {
                     Text("Sign up.")
                         .foregroundColor(.red)
