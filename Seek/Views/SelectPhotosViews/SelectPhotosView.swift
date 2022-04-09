@@ -9,8 +9,22 @@ import SwiftUI
 import Photos
 
 struct SelectPhotosView: View {
+    @EnvironmentObject var viewModel: AccountViewModel
+    @EnvironmentObject var newUser : UserClass
+
     var body: some View {
-        Home()
+        VStack {
+            Home()
+            if(newUser.photos.count > 0) {
+                Button {
+                    print("CREATE")
+    //                viewModel.signup(username: <#T##String#>, password: <#T##String#>)
+                } label: {
+                    Text("Create Account")
+                }
+            }
+        }
+        
     }
 }
 
@@ -58,9 +72,10 @@ struct Home : View {
 
                     self.show.toggle()
                     
+                    
                 }) {
                     
-                    Text("Image Picker")
+                    Text("Select Profile Photos")
                         .foregroundColor(.white)
                         .padding(.vertical,10)
                         .frame(width: UIScreen.main.bounds.width / 2)
@@ -81,7 +96,7 @@ struct Home : View {
 
 
 struct CustomPicker : View {
-    
+    @EnvironmentObject var newUser : UserClass
     @Binding var selected : [SelectedImages]
     @State var grid : [[Images]] = []
     @Binding var show : Bool
@@ -127,7 +142,12 @@ struct CustomPicker : View {
                     Button(action: {
                         
                         self.show.toggle()
-                        
+                        var userImages : [UIImage] = []
+                        for currImage in selected {
+                            userImages.append(currImage.image)
+                        }
+                        newUser.photos = userImages
+                        newUser.toString()
                     }) {
                         
                         Text("Select")

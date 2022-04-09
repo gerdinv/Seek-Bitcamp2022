@@ -68,7 +68,7 @@ struct LoginView: View {
                 Text("Don't have an account?")
                     .fontWeight(.medium)
                 NavigationLink {
-                    RegisterView(bday: Date())
+                    RegisterView()
                 } label: {
                     Text("Sign up.")
                         .foregroundColor(.red)

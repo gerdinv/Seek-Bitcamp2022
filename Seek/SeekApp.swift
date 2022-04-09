@@ -13,7 +13,9 @@ struct SeekApp: App {
     var body: some Scene {
         WindowGroup {
             let viewModel = AccountViewModel()
+            let appI = UserClass()
             ContentView().environmentObject(viewModel)
+                .environmentObject(appI)
         }
     }
 }

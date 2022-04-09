@@ -9,9 +9,11 @@ import SwiftUI
 import CryptoKit
 
 struct ExtraSignupInfo: View {
+    @EnvironmentObject var newUser : UserClass
     @State private var searchText = ""
     @State var schoolClicked = ""
-    var listOfSchools = ["UMD", "Towson", "Johns Hopkins", "UMD", "Towson", "Johns Hopkins", "UMD", "Towson", "Johns Hopkins", "UMD", "Towson", "Johns Hopkins"]
+    var listOfSchools = ["UMD", "Towson", "Johns Hopkins", "CIT", "MIT", "CMU", "SU", "UCB", "UIUC", "CU", "GT", "UW", "PU",
+    "UTA", "UCLA", "UCSA", "HU", "UMCP", "UPENN", "UWM", "JHU"]
     
     var body: some View {
         VStack {
@@ -23,6 +25,7 @@ struct ExtraSignupInfo: View {
                                 schoolClicked = ""
                             } else {
                                 schoolClicked = school
+                                newUser.school = school
                             }
                             
                         } label: {
@@ -41,6 +44,7 @@ struct ExtraSignupInfo: View {
             if (schoolClicked != "") {
                 FilledButton(text: "Continue") {
                     print(schoolClicked)
+                    print(newUser.toString)
                 }
                 
                 NavigationLink(destination: SelectHobbiesView()) {

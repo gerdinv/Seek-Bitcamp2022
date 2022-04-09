@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SelectHobbiesView: View {
+    @EnvironmentObject var newUser : UserClass
     @State private var searchText = ""
     @State var hobbyClicked : [String] = []
     var listOfHobbies = ["Travel", "Outdoors", "Anime", "Gaming", "Sports", "Movies", "Art", "Accounting", "Computer Science", "Coding", "Foodie", "Biology", "Nursing", "Engineering", "Liberal Arts", "Business"]
@@ -21,8 +22,10 @@ struct SelectHobbiesView: View {
                             if (hobbyClicked.contains(school)) {
                                 let idx = hobbyClicked.index(of: school)
                                 hobbyClicked.remove(at: idx!)
+                                newUser.hobbies = hobbyClicked
                             } else {
                                 hobbyClicked.append(school)
+                                newUser.hobbies = hobbyClicked
                             }
                             
                         } label: {

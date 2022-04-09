@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SelectMajorView: View {
+    @EnvironmentObject var newUser : UserClass
     @State private var searchText = ""
     @State var majorsClicked : [String] = []
     var listOfMajors = ["Art", "Accounting","Biology", "Business", "Computer Science", "Nursing", "Engineering", "Liberal Arts"]
@@ -21,8 +22,10 @@ struct SelectMajorView: View {
                             if (majorsClicked.contains(school)) {
                                 let idx = majorsClicked.index(of: school)
                                 majorsClicked.remove(at: idx!)
+                                newUser.majorsClicked = majorsClicked
                             } else {
                                 majorsClicked.append(school)
+                                newUser.majorsClicked = majorsClicked
                             }
                             
                         } label: {

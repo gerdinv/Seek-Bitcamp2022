@@ -8,14 +8,7 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @State var username: String = ""
-    @State var email: String = ""
-    @State var password: String = ""
-    @State var passwordConfirmation: String = ""
-
-    @State var bday: Date
-    @State var gradYear = 0
-    @State var leaseLength =  0
+    @EnvironmentObject var newUser : UserClass
     
     var colors : [Color] = [.red, .green, .blue, .purple, .pink, .brown]
     
@@ -27,36 +20,36 @@ struct RegisterView: View {
             Spacer()
                 .frame(width: 0, height: 10)
             VStack {
-                CustomTextField(myText: $username,
+                CustomTextField(myText: $newUser.fullname,
                                 isSecure: false,
                                 imageName: "person.fill",
                                 placeholder: Text("Full Name"))
                 
-                CustomTextField(myText: $email,
+                CustomTextField(myText: $newUser.email,
                                 isSecure: false,
                                 imageName: "envelope.badge",
                                 placeholder: Text("Email"))
                 
-                CustomTextField(myText: $password,
+                CustomTextField(myText: $newUser.password,
                                 isSecure: true,
                                 imageName: "lock",
                                 placeholder: Text("Password"))
                 
-                CustomTextField(myText: $passwordConfirmation,
+                CustomTextField(myText: $newUser.password,
                                 isSecure: true,
                                 imageName: "lock",
-                                placeholder: Text("Confirm Password"))
+                                placeholder: Text("Confirm Password")
+                )
             }
             
-            
             VStack(alignment: .leading) {
-                DatePicker("Birth date:", selection: $bday, in: ...Date(), displayedComponents: .date)
+                DatePicker("Birth date:", selection: $newUser.bday, in: ...Date(), displayedComponents: .date)
                     .datePickerStyle(.compact)
                     .frame(width: 280)
                     .font(.system(size: 20, weight: .semibold))
                 Text("Graduation Year:")
                     .fontWeight(.semibold)
-                Picker("What is your graduation year?", selection: $gradYear) {
+                Picker("What is your graduation year?", selection: $newUser.gradYear) {
                     Text("2022").tag(0)
                     Text("2023").tag(1)
                     Text("2024").tag(2)
@@ -67,7 +60,7 @@ struct RegisterView: View {
                 .pickerStyle(.segmented)
                 Text("Desired Lease Length")
                     .fontWeight(.semibold)
-                Picker("What is your desired lease length?", selection: $leaseLength) {
+                Picker("What is your desired lease length?", selection: $newUser.leaseLength) {
                     Text("6 Months").tag(0)
                     Text("12 Months").tag(1)
                 }
@@ -76,12 +69,10 @@ struct RegisterView: View {
             .frame(width: 280)
             
             NavigationLink {
-                ExtraSignupInfo()
+                ExtraSignupInfo().environmentObject(newUser)
             } label: {
                 Text("HEY")
             }
-
-          
             .padding(.top, 25)
             
             Spacer()
@@ -92,6 +83,6 @@ struct RegisterView: View {
 
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterView(bday: Date())
+        RegisterView()
     }
 }
