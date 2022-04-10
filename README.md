@@ -83,6 +83,7 @@ teammates' computers.
 ## What's next for Seek
 - Better UI, more fluid animations and design
 - Add many more filters for housing and what kind of roommates you are looking for
+- Complete a the messaging system
 
 
 
@@ -93,19 +94,14 @@ To get started, make sure you have the latest version of NodeJS installed.
 
 ### Installation
 
-1. Create an account at Twilio and link it to Courier. [https://docs.courier.com/docs/getting-started-twilio](https://docs.courier.com/docs/getting-started-twilio) 
-2. Navigate to the JS directory and run ```npm install```
-4. Create a .env file and paste your Courier Auth Token and Courier notification id.
+1. Clone the repository
+2. Run ```pod install``` in the cloned directory
+3. Navigate to the 'backend' directory and run ```pip3 install```
+4. Run ```python3 seak-api.py``` to start the server.
+5. Open the 'seek.xcworkspace' file and run the app!
    ```
-    COURIER_AUTH_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    COURIER_NOTIFICATION_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+
     ```
-3. Start the NodeJS server.
-4. Navigate to the SwiftFiles directory and run ```pod install```
-5. Open the HomeViewController file and replace the ip in the link with your IPV4 address
-6. Run the program and enjoy using the app!
-
-
 <!-- USAGE EXAMPLES -->
 ## Usage
 
@@ -118,6 +114,10 @@ Use this space to show useful examples of how a project can be used. Additional 
 Gerdin Ventura - [@linkedin](https://www.linkedin.com/in/gerdin-ventura-croussett-2b28081a3/) - gerdinventuraedu@gmail.com
 <br />
 Armando Taveras - [@linkedin](https://www.linkedin.com/in/armando-taveras-04731216a/) - armandogtaveras@gmail.com
+
+Dalton Pang - [@linkedin](https://www.linkedin.com/in/dalton-pang/) - dspangp@gmail.com
+
+Sathwik Yanamaddi - [@linkedin](https://www.linkedin.com/in/sathwikyanamaddi/) - sathwik45@gmail.com
 <br />
 
 
