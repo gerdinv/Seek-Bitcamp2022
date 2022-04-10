@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/gerdinv/Sentry">
-    <img src="https://cdn.discordapp.com/attachments/429515082075209739/830763886579679232/sentryLogo.png" alt="Logo" width="150" height="150">
+    <img src="![image](https://user-images.githubusercontent.com/56232769/162621238-0f66dd44-01d7-4e2f-968c-92d453a317a0.png)" alt="Logo" width="150" height="150">
   </a>
 
   <h3 align="center">Sentry</h3>
