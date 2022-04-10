@@ -50,16 +50,14 @@ Seek also has a map feature which allows the user to browse through rentals in t
 propety a "Like" which then shows other matched users that they liked the property.
 
 
-1. we're gonna put rentals in the area.
-2. "Click on a pin and save that house as one of your hoses. When you like a property yo"
-
-
 <img src='https://i.gyazo.com/9a9d09705b089537b4d58e8740dfb962.png' title='Sreenshot' width='300' height='500' />
 Video Demonstration: https://www.youtube.com/watch?v=u2s2qTndjDI&lc=UgxTympcvHMA5CmrHlJ4AaABAg&ab_channel=GerdinVentura
 
 
 ### Inspiration
-We noticed a lack of 
+Within our different friend groups we have always tried to figure out a way to live with some of our friends. This however has never worked out, someone always ends up not going through with the arrangement then everyone else gets left with options. With that being said, finding a reliable roommate has
+always been a stressful task and we wanted to figure out a way to make the process simple. With Seek, people will no longer run into a situation where
+someone backs out last second which take all of the stress away from finding a good roommate.
 
 ### What we learned:
 * Technologies such as Geotechnologies and Courier
