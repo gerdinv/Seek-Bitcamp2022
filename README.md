@@ -119,6 +119,5 @@ Gerdin Ventura - [@linkedin](https://www.linkedin.com/in/gerdin-ventura-crousset
 <br />
 Armando Taveras - [@linkedin](https://www.linkedin.com/in/armando-taveras-04731216a/) - armandogtaveras@gmail.com
 <br />
-Tony Che - [@linkedin](https://www.linkedin.com/in/tony-ch%C3%A9-b59624202/) - t_che@outlook.com
 
-Project Link: [https://github.com/gerdinv/Sentry](https://github.com/gerdinv/Sentry)
+
