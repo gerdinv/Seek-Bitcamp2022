@@ -1,11 +1,11 @@
 # Bitcamp2022
 <br />
 <p align="center">
-  <a href="https://github.com/gerdinv/Sentry">
-    <img src="https://gyazo.com/b2b10007eb8612f1badedc4bc6e04c4b" alt="Logo" width="150" height="150">
+  <a href="https://github.com/gerdinv/Bitcamp2022">
+    <img src="https://media.discordapp.net/attachments/962139011621720134/962710232528736286/seek_logo.png" alt="Logo" width="150" height="150">
   </a>
 
-  <h3 align="center">Sentry</h3>
+  <h3 align="center">Seek</h3>
 
   <p align="center">
    Seek is an ios app dedicated to helping people find their perfect roommate.
