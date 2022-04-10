@@ -22,9 +22,10 @@ class UserClass: ObservableObject {
     @Published var majorsClicked : [String] = []
     
     @Published var photos : [UIImage] = []
+    @Published var body : [String : Any] = [:]
 
     func toString() {
-        let arr = ["first_name" : fullname.split(separator: " "),
+        let arr : [String : Any] = ["first_name" : fullname.split(separator: " "),
                     "last_name" : fullname.split(separator: " ")[1],
                        "email" : email,
                       "gender" : "Male",
@@ -44,7 +45,8 @@ class UserClass: ObservableObject {
                   "Interest_1" : "Music",
                   "Interest_2" : "Art",
                   "Interest_3" : "Coding"
-        ] as [AnyHashable : Any]
+        ] 
+        body = arr
         print(arr)
     }
 }

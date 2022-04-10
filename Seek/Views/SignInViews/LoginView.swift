@@ -13,72 +13,76 @@ struct LoginView: View {
     @EnvironmentObject var viewModel: AccountViewModel
     
     var body: some View {
-        VStack(spacing: 20) {
-            Image("seek_logo")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 550, height: 250)
-            CustomTextField(myText: $username,
-                            isSecure: false, imageName: "person.fill",
-                            placeholder: Text("Username"))
-            
-            CustomTextField(myText: $password,
-                            isSecure: true, imageName: "lock",
-                            placeholder: Text("Password"))
-            
-            Text("Forgot Password?")
-                .font(.system(size: 12, weight: .semibold))
-                .padding(.leading, 160)
-            
-            FilledButton(text: "LOGIN") {
-                viewModel.signIn(username: username, password: password)
-            }
-            
-            HStack {
-                Rectangle()
-                    .frame(width: 110, height: 1)
-                Text("or")
-                Rectangle()
-                    .frame(width: 110, height: 1)
-            }
-            .foregroundColor(.secondary)
-            .padding()
-            
-            HStack (spacing: 40){
-                Image("ig_logo")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 48, height: 48)
-                    .cornerRadius(12)
+        ZStack {
+            Color("bg_color").ignoresSafeArea(.all, edges: .all)
 
-                Image("twitter_logo")
+            VStack(spacing: 20) {
+                Image("seek_logo")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 48, height: 48)
-                    .cornerRadius(12)
-
-                Image("google_logo")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 48, height: 48)
-                    .cornerRadius(12)
-            }
-            
-            HStack(spacing: 5) {
-                Text("Don't have an account?")
-                    .fontWeight(.medium)
-                NavigationLink {
-                    RegisterView()
-                } label: {
-                    Text("Sign up.")
-                        .foregroundColor(.red)
-                        .fontWeight(.bold)
+                    .frame(width: 550, height: 250)
+                CustomTextField(myText: $username,
+                                isSecure: false, imageName: "person.fill",
+                                placeholder: Text("Username"))
+                
+                CustomTextField(myText: $password,
+                                isSecure: true, imageName: "lock",
+                                placeholder: Text("Password"))
+                
+                Text("Forgot Password?")
+                    .font(.system(size: 12, weight: .semibold))
+                    .padding(.leading, 160)
+                
+                FilledButton(text: "LOGIN") {
+                    viewModel.signIn(username: username, password: password)
                 }
+                
+                HStack {
+                    Rectangle()
+                        .frame(width: 110, height: 1)
+                    Text("or")
+                    Rectangle()
+                        .frame(width: 110, height: 1)
+                }
+                .foregroundColor(.secondary)
+                .padding()
+                
+                HStack (spacing: 40){
+                    Image("ig_logo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 48, height: 48)
+                        .cornerRadius(12)
+
+                    Image("twitter_logo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 48, height: 48)
+                        .cornerRadius(12)
+
+                    Image("google_logo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 48, height: 48)
+                        .cornerRadius(12)
+                }
+                
+                HStack(spacing: 5) {
+                    Text("Don't have an account?")
+                        .fontWeight(.medium)
+                    NavigationLink {
+                        RegisterView()
+                    } label: {
+                        Text("Sign up.")
+                            .foregroundColor(.red)
+                            .fontWeight(.bold)
+                    }
+                }
+                .font(.system(size: 15))
+                .padding()
             }
-            .font(.system(size: 15))
-            .padding()
+            .padding(.top, 20)
         }
-        .padding(.top, 20)
     }
     
 }

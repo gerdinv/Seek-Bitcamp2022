@@ -38,12 +38,14 @@ struct SettingsView: View {
                     } label: {
                         NavigationTextView(text: "My Location")
                     }
-                    NavigationLink {
-                        Text("HEY")
+                    
+                    Button {
+                        viewModel.logout()
                     } label: {
                         NavigationTextView(text: "Log Out")
-                        
+
                     }
+
                 }
             }.frame(width: 330, height: 450)
                 .background(.white)

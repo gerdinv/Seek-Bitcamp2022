@@ -17,7 +17,11 @@ struct SelectPhotosView: View {
             Home()
             if(newUser.photos.count > 0) {
                 Button {
+                    newUser.toString()
+                    // sign user up
                     viewModel.signup(username: newUser.fullname, password: newUser.password)
+                    // Save to cockroach
+                    NetworkManager.shared.postRequest(body: newUser.body)
                 } label: {
                     Text("Create Account")
                 }
