@@ -14,10 +14,10 @@ struct LoginView: View {
     
     var body: some View {
         VStack(spacing: 20) {
-            Image("logo")
+            Image("seek_logo")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 200, height: 200)
+                .frame(width: 550, height: 250)
             CustomTextField(myText: $username,
                             isSecure: false, imageName: "person.fill",
                             placeholder: Text("Username"))

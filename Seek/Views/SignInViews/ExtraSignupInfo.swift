@@ -13,7 +13,7 @@ struct ExtraSignupInfo: View {
     @State private var searchText = ""
     @State var schoolClicked = ""
     var listOfSchools = ["UMD", "Towson", "Johns Hopkins", "CIT", "MIT", "CMU", "SU", "UCB", "UIUC", "CU", "GT", "UW", "PU",
-    "UTA", "UCLA", "UCSA", "HU", "UMCP", "UPENN", "UWM", "JHU"]
+                         "UTA", "UCLA", "UCSA", "HU", "UMCP", "UPENN", "UWM", "JHU"]
     
     var body: some View {
         VStack {
@@ -27,31 +27,26 @@ struct ExtraSignupInfo: View {
                                 schoolClicked = school
                                 newUser.school = school
                             }
-                            
                         } label: {
-                            Text(school)
-                                .background(school == schoolClicked ? .red : .white)
-                                .listItemTint(.green)
+                            CustomSelectedCell(cellText: school, school: school, schoolClicked: schoolClicked)
                         }
                     }
-                    .background(school == schoolClicked ? .red : .white)
-  
+                    .frame(width: UIScreen.main.bounds.width, height: 50, alignment: .leading)
+                    .listRowBackground( self.schoolClicked == school ? Color.red : .clear)
                 }
                 .searchable(text: $searchText,placement: .navigationBarDrawer(displayMode: .always), prompt: "Enter your University")
             }
             .navigationTitle("Select your University!")
+            .listStyle(PlainListStyle())
+            .onAppear {
+                UITableView.appearance().separatorColor = .clear
+            }
             
             if (schoolClicked != "") {
-                FilledButton(text: "Continue") {
-                    print(schoolClicked)
-                    print(newUser.toString)
-                }
-                
                 NavigationLink(destination: SelectHobbiesView()) {
-                    Text("NEXT")
+                    CustomNextButton()
                 }
             }
-
         }
     }
     

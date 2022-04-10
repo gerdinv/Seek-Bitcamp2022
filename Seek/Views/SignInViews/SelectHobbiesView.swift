@@ -30,23 +30,25 @@ struct SelectHobbiesView: View {
                             
                         } label: {
                             Text(school)
-                                .background(hobbyClicked.contains(school) ? .red : .white)
-                                .listItemTint(.green)
+                                .background(hobbyClicked.contains(school) ? .red : .clear)
                         }
                     }
-                    .background(hobbyClicked.contains(school) ? .red : .white)
-                    
+                    .frame(width: UIScreen.main.bounds.width, height: 50, alignment: .leading)
+                    .listRowBackground( hobbyClicked.contains(school) ? Color.red : .clear)
                 }
                 .searchable(text: $searchText,placement: .navigationBarDrawer(displayMode: .always), prompt: "Enter your Interests")
+            }
+            .listStyle(PlainListStyle())
+            .onAppear {
+                UITableView.appearance().separatorColor = .clear
             }
             .navigationTitle("Select your Interests!")
             
             if (hobbyClicked.count != 0) {
                 NavigationLink(destination: SelectMajorView()) {
-                    Text("Next")
+                    CustomNextButton()
                 }
             }
-            
         }
     }
     

@@ -9,36 +9,55 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var viewModel: AccountViewModel
+    @EnvironmentObject var homePageViewModel: HomePageViewModel
+    
     var body: some View {
         NavigationView {
-            if (!viewModel.isSignedIn) {
+            if (viewModel.isSignedIn) {
                 TabView {
                     HomePageView().tabItem {
                         VStack {
                               Text("Home")
                               Image(systemName: "house.fill")
-                          }
+                          }.background(Color("bg_color"))
                     }
+                    .environmentObject(viewModel)
                     
-                    MatchesView().tabItem {
+                    MainMessageView().tabItem {
                         VStack {
-                              Text("Home")
-                              Image(systemName: "house.fill")
-                          }
+                              Text("Messages")
+                              Image(systemName: "message.fill")
+                          }.background(Color("bg_color"))
                     }
+                    .environmentObject(viewModel)
+                    .environmentObject(homePageViewModel)
+                    .navigationBarHidden(true)
                     
-                    ProfileView().tabItem {
+                    MapScreenView().tabItem {
+                        VStack {
+                              Text("Map")
+                              Image(systemName: "map.circle.fill")
+                          }.background(Color("bg_color"))
+                    }
+                    .environmentObject(viewModel)
+                    
+                    // profile view
+                    SettingsView().tabItem {
                         VStack {
                               Text("Settings")
                               Image(systemName: "person.fill")
-                          }
+                        }.background(Color("bg_color"))
+                        
                     }
+                    .environmentObject(viewModel)
                 }
+                .background(Color("bg_color"))
                 .tabViewStyle(.automatic)
             } else {
                 LoginView()
             }
         }
+        
     }
 }
 

@@ -34,12 +34,6 @@ struct RegisterView: View {
                                 isSecure: true,
                                 imageName: "lock",
                                 placeholder: Text("Password"))
-                
-                CustomTextField(myText: $newUser.password,
-                                isSecure: true,
-                                imageName: "lock",
-                                placeholder: Text("Confirm Password")
-                )
             }
             
             VStack(alignment: .leading) {
@@ -71,7 +65,7 @@ struct RegisterView: View {
             NavigationLink {
                 ExtraSignupInfo().environmentObject(newUser)
             } label: {
-                Text("HEY")
+                CustomNextButton()
             }
             .padding(.top, 25)
             

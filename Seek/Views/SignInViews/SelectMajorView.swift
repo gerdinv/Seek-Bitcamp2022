@@ -34,16 +34,21 @@ struct SelectMajorView: View {
                                 .listItemTint(.green)
                         }
                     }
-                    .background(majorsClicked.contains(school) ? .red : .white)
+                    .frame(width: UIScreen.main.bounds.width, height: 50, alignment: .leading)
+                    .listRowBackground( majorsClicked.contains(school) ? Color.red : .clear)
                     
                 }
-                .searchable(text: $searchText,placement: .navigationBarDrawer(displayMode: .always), prompt: "Enter your Interests")
+                .searchable(text: $searchText,placement: .navigationBarDrawer(displayMode: .always), prompt: "Type your Major")
             }
-            .navigationTitle("Select your Interests!")
+            .navigationTitle("Select your Major(s)")
+            .listStyle(PlainListStyle())
+            .onAppear {
+                UITableView.appearance().separatorColor = .clear
+            }
             
             if (majorsClicked.count != 0) {
                 NavigationLink(destination: SelectPhotosView()) {
-                    Text("NExt")
+                    CustomNextButton()
                 }
             }
             

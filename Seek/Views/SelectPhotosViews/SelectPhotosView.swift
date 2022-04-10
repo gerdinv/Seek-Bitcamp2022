@@ -17,8 +17,7 @@ struct SelectPhotosView: View {
             Home()
             if(newUser.photos.count > 0) {
                 Button {
-                    print("CREATE")
-    //                viewModel.signup(username: <#T##String#>, password: <#T##String#>)
+                    viewModel.signup(username: newUser.fullname, password: newUser.password)
                 } label: {
                     Text("Create Account")
                 }

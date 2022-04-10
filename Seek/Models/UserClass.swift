@@ -24,16 +24,27 @@ class UserClass: ObservableObject {
     @Published var photos : [UIImage] = []
 
     func toString() {
-        print(fullname + "\n" + email + "\n" + password + "\n" + school + "\n" + bday.description + "\n" + gradYear.description + "\n" + leaseLength.description + "\n" + hobbies.description + "\n" + majorsClicked.description + "\n" + photos.description)
+        let arr = ["first_name" : fullname.split(separator: " "),
+                    "last_name" : fullname.split(separator: " ")[1],
+                       "email" : email,
+                      "gender" : "Male",
+                  "university" : school,
+                 "Lease_Term" : 12,
+                        "Major": "Computer Science",
+                      "Sports" : 0,
+                      "Gaming" : 0,
+                      "Coding" : 0,
+                    "Outdoors" : 0,
+                      "Movies" : 0,
+                         "Art" : 0,
+                       "Anime" : 0,
+                      "Foodie" : 1,
+                       "Music" : 1,
+                      "Travel" : 0,
+                  "Interest_1" : "Music",
+                  "Interest_2" : "Art",
+                  "Interest_3" : "Coding"
+        ] as [AnyHashable : Any]
+        print(arr)
     }
-    
 }
-
-
-// (x) Create user class w info that can be passed throughout all the registration screens
-// (x) Finish saving the user photos
-// (x) Start with the swipe left, swipe right shit
-// () Create user profile page for all the roommate matches
-// () Fix Registration UI
-// () Profile / Settings Page
-

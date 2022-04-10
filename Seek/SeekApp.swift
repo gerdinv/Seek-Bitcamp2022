@@ -14,8 +14,10 @@ struct SeekApp: App {
         WindowGroup {
             let viewModel = AccountViewModel()
             let appI = UserClass()
+            let hpvm = HomePageViewModel()
             ContentView().environmentObject(viewModel)
                 .environmentObject(appI)
+                .environmentObject(hpvm)
         }
     }
 }
