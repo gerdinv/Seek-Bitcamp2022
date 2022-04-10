@@ -1,5 +1,4 @@
 # Bitcamp2022
-BIT CAMP 2022
 <br />
 <p align="center">
   <a href="https://github.com/gerdinv/Sentry">
