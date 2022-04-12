@@ -44,7 +44,7 @@ struct SelectHobbiesView: View {
             }
             .navigationTitle("Select your Interests!")
             
-            if (hobbyClicked.count != 0) {
+            if (hobbyClicked.count == 3) {
                 NavigationLink(destination: SelectMajorView()) {
                     CustomNextButton()
                 }

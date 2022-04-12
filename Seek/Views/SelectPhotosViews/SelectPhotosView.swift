@@ -21,7 +21,7 @@ struct SelectPhotosView: View {
                     // sign user up
                     viewModel.signup(username: newUser.fullname, password: newUser.password)
                     // Save to cockroach
-                    NetworkManager.shared.postRequest(body: newUser.body)
+//                    NetworkManager.shared.postRequest(body: newUser.body)
                 } label: {
                     Text("Create Account")
                 }
