@@ -104,8 +104,8 @@ To get started, make sure you have the latest version of NodeJS installed.
     ```
 <!-- USAGE EXAMPLES -->
 ## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+<img src="http://g.recordit.co/aeYUcklWlZ.gif" width=250><br>
+Video Demonstration: https://www.youtube.com/watch?v=q0KW5OaI_iQ
 
 
 <!-- CONTACT -->

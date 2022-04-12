@@ -43,7 +43,7 @@ struct SettingsView: View {
                         viewModel.logout()
                     } label: {
                         NavigationTextView(text: "Log Out")
-
+                        
                     }
 
                 }
