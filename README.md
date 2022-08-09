@@ -114,7 +114,7 @@ Video Demonstration: https://www.youtube.com/watch?v=q0KW5OaI_iQ
 Gerdin Ventura - [@linkedin](https://www.linkedin.com/in/gerdin-ventura-croussett-2b28081a3/) - gerdinventuraedu@gmail.com
 <br />
 Armando Taveras - [@linkedin](https://www.linkedin.com/in/armando-taveras-04731216a/) - armandogtaveras@gmail.com
-
+Timothy Lee - [@linkedin](https://www.linkedin.com/in/timothy-lee-99097b1b6) - timothy.aram.lee@gmail.com
 Dalton Pang - [@linkedin](https://www.linkedin.com/in/dalton-pang/) - dspangp@gmail.com
 
 Sathwik Yanamaddi - [@linkedin](https://www.linkedin.com/in/sathwikyanamaddi/) - sathwik45@gmail.com
