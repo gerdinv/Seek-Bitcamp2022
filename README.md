@@ -115,7 +115,7 @@ Gerdin Ventura - [@linkedin](https://www.linkedin.com/in/gerdin-ventura-crousset
 <br />
 Armando Taveras - [@linkedin](https://www.linkedin.com/in/armando-taveras-04731216a/) - armandogtaveras@gmail.com <br />
 Timothy Lee - [@linkedin](https://www.linkedin.com/in/timothy-lee-99097b1b6) - timothy.aram.lee@gmail.com <br />
-Dalton Pang - [@linkedin](https://www.linkedin.com/in/dalton-pang/) - dspangp@gmail.com <br />
+Dalton Pang - [@linkedin](https://www.linkedin.com/in/dalton-pang/) - dspangp@gmail.com
 
 Sathwik Yanamaddi - [@linkedin](https://www.linkedin.com/in/sathwikyanamaddi/) - sathwik45@gmail.com
 <br />
